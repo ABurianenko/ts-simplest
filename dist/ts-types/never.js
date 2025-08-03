@@ -18,6 +18,7 @@ function unionTypesChecking(ourParameter) {
         console.log(ourParameter + 5);
     }
     else {
+        ourParameter;
         console.log("I am not sure what you are");
     }
 }
