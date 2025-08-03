@@ -8,7 +8,7 @@ type Boat = {
     engine: string;
 }
 
-type Amphibia = Car & Boat;
+type Amphibia = Car & Boat; //об’єднує декілька типів в один
 
 const superVehicle: Amphibia = {
     wheels: 4,

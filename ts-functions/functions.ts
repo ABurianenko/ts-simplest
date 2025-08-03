@@ -1,3 +1,5 @@
+// визначає типи параметрів функції та значення, що повертається
+
 function sum(numberOne: number, numberTwo: number): number {
     return numberOne + numberTwo;
 }

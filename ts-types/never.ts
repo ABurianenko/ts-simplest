@@ -1,3 +1,5 @@
+// Для функцій, які завжди викидають помилку, або у нескінченних функціях
+
 function throwError(message: string): never {
     throw new Error(message)
 }

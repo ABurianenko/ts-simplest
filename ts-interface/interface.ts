@@ -5,8 +5,10 @@ interface Person {
 }
 
 interface Person {
-    surname?: string;
+    surname?: string; // символ ? означає, що параметр може бути пропущений
 }
+
+// Якщо визначити два interface з однаковими іменами, то вони об’єднаються в один. 
 
 interface Employee {
     salary: number;
@@ -14,10 +16,12 @@ interface Employee {
     department?: string;
 }
 
+// розширення одного інтерфейсу іншим
 interface Chief extends Employee, Person {
     teamSize: number;
 }
 
+// встановлює обов’язкові властивості класу
 class Manager implements Person, Employee {
     name: string;
     age: number;
@@ -87,10 +91,10 @@ const bigBoss: ManagerType = {
 console.log(bigBoss);
 
 
-type Name = Pick<PersonType, "name">;
+type Name = Pick<PersonType, "name">; //Дозволяє обрати набір властивостей з існуючого типу і створити новий тип на їх основі
 const myName: Name = { name: "John Doe" }
 
-type IsActive = Omit<PersonType, "name" | "age">;
+type IsActive = Omit<PersonType, "name" | "age">; //Дозволяє створити новий тип на основі типу шляхом виключення набору властивостей.
 const active: IsActive = { isActive: true };
 
 type Id = string | number;
